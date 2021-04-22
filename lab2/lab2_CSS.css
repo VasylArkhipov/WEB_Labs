@@ -1,0 +1,67 @@
+#header{
+    background-color: #ccc;
+}
+#main{
+    background-color: #eee;
+    height: 200px;
+}
+#sidebar{
+    background-color: #ddd;
+}
+TABLE {
+    border-collapse: collapse;
+    width: 300px;
+}
+TH {
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+TR:nth-child(odd){
+    background: saddlebrown;
+}
+TR:nth-child(even){
+    background: yellow;
+}
+.border1{
+    border: solid 5px red;
+    transition: border-width 0.6s linear;
+}
+.border1:hover{
+    border-width: 10px;
+}
+/*20*/
+.sneakers {
+    float: right;
+    width: 15%;
+    height: 15%;
+    transform: rotate(30deg);
+    border: thin rgb(201, 13, 13) solid;
+    margin: 0px 100px 100px 0px;
+    padding: 0.5em;
+
+}
+/*28*/
+h3 {
+    background: red;
+    display: inline-block;
+    float: left;
+}
+/*33*/
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block {
+
+    display: block;
+}
+p.new:after {
+    content: "James Harden and Kevin Durant!";
+    color: #333;
+    background-color: #fc0;
+    font-size: 90%;
+    padding: 2px;
+}

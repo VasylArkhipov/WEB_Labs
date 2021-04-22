@@ -1,10 +1,6 @@
 /*масштабування зображеня одразу та фон*/
-.photo {                    
-    height: 785px;
-    min-width: 1000px;
-    max-width: 1630px;
-    overflow:auto;
-    padding-left:15px;
+.photo {
+    background-attachment: fixed;
     background: url(lil.jpg);
 }
 .photo2 {
