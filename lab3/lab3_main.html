@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab3</title>
+    <style>
+        .work{
+            margin: 0;
+        }
+        .active{
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+            <div class="work" >
+                time from 2 task and colored back + text:
+            <script>
+                //1
+                if(document.cookie.length>0){
+                    alert("Cookies увімкнуто.Зміст: "+document.cookie);
+                }else{
+                    alert("Cookies вимкнуто");
+                }
+                //2
+                let data = 456123124124;
+                alert(data);
+                document.write((new Date(data * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0]);
+                //3
+                var answer;
+                var yesAnswer="так";
+                var res=prompt(answer,yesAnswer);
+                if(res==yesAnswer){
+                    document.querySelector('.work').classList.add('active');
+                }
+
+            </script>
+                </div>
+</body>
+</html>
