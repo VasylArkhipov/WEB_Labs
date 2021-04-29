@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action="input5.php">
+    <p><b>Введіть числа</b></p>
+    <p><input type="checkbox" name="option1" value="a1" checked> <input type="text" id="in"/><br>
+        <input type="checkbox" name="option2" value="a2"> <input type="text" id="in1" /><br>
+        <input type="checkbox" name="option3" value="a3"> <input type="text" id="in2" /><br>
+        <input type="checkbox" name="option4" value="a4"> <input type="text" id="in3" /><br>
+        <input type="checkbox" name="option5" value="a5"><input type="text" id="in4" />
+    </p>
+    <p><input type="submit" value="Отправить" id="butt"></p>
+</form>
+    <p></p>
+
+<form name="search">
+    <textarea rows="7" cols="40" name="message"></textarea>
+    <p><input type="submit" value="Click" id="butt1"></p>
+</form>
+    <script>
+        //26
+        var title="введіть рядок";
+        var result=prompt(title);
+        var n = 4;
+        var splited = result.split(',');
+            for(var i=0;i<4;i++){
+                document.write(splited[i]);
+            }
+        //22
+        var inp= document.getElementById("in").value;
+        var inp1= document.getElementById("in1").value;
+        var inp2= document.getElementById("in2").value;
+        var inp3= document.getElementById("in3").value;
+        var inp4= document.getElementById("in4").value;
+        var buttons=document.getElementById("butt");
+        buttons.onclick=checkSome;
+        function checkSome(){
+            if(!Number.isInteger(inp) || !Number.isInteger(inp1) || !Number.isInteger(inp2) || !Number.isInteger(inp3) || !Number.isInteger(inp4)) {
+                alert("error");
+            }
+        }
+        //24
+        var title1="enter";
+        var result1=prompt(title1);
+        var splited1 = result1.split(',');
+        var str=' ';
+        for(var ind=0;ind<splited1.length-1;ind++){
+            for(var ind2=ind+1;ind2<splited1.length-1;ind2++){
+                if(splited1[ind]==splited1[ind2]){
+                    str+=' '+ String(splited1[ind]);
+                }
+            }
+        }
+        alert(str);
+        //25
+
+        var title2="enter";
+        var result2=prompt(title2);
+        var splited2 = result2.split(',');
+        var str=' ';
+        var shufled = [];
+        for(var someNum = 0;someNum<splited2.length;someNum++){
+            shufled[someNum]=Number(splited2[someNum]);
+        }
+        shuffle(shufled);
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+        alert(shufled);
+
+
+
+    </script>
+</body>
+</html>
