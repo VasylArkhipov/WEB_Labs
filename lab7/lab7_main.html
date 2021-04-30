@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="search">
+    <textarea rows="7" cols="40" name="message"  id="text" ></textarea>
+    <p><input type="submit" value="Замінити @ на !" id="butt1"></p>
+    <p><input type="submit" value="Розвернути" id="butt2"></p>
+</form>
+<p><input type="submit" value="Поточна дата" id="butts"></p>
+
+    <script>
+        var button1= document.getElementById("butt1");
+        var button2= document.getElementById("butt2");
+        var bb3=document.getElementById("butts");
+        button1.onclick=repl;
+        button2.onclick=revers;
+        bb3.onclick=dat;
+        function repl(){
+            var someValue = document.getElementById("text").value;
+            var re = /@/gi;
+            var newstr = str.replace(re, '!');
+            document.write(newstr);
+        }
+        function revers(){
+            var someValue1 = document.getElementById("text").value;
+            document.getElementById("text").value=str.split("").reverse().join("");
+        }
+        function dat() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+
+            today = yyyy+ '-' +mm + '-'+dd ;
+           alert(today);
+        }
+    </script>
+</body>
+</html>
